@@ -12,6 +12,12 @@ export const lightTheme = {
   surface: " #ffffff",
   textColor: "#FFFFFF",
   backgroundColor: "#f7faff",
+  opposite: {
+    primary: "#1262f4",
+    surface: "#282828",
+    textColor: "#FFFFFF",
+    backgroundColor: "#131313",
+  },
 };
 
 export const darkTheme = {
@@ -19,4 +25,10 @@ export const darkTheme = {
   surface: "#282828",
   textColor: "#FFFFFF",
   backgroundColor: "#131313",
+  opposite: {
+    primary: "#1262f4",
+    surface: " #ffffff",
+    textColor: "#FFFFFF",
+    backgroundColor: "#f7faff",
+  },
 };

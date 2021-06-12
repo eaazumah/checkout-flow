@@ -1,6 +1,21 @@
 import "styled-components";
 
+export interface OppositTheme {
+  primary: string;
+  surface: string;
+  textColor: string;
+  backgroundColor: string;
+}
+
 export interface Theme {
+  primary: string;
+  surface: string;
+  textColor: string;
+  backgroundColor: string;
+  opposite: OppositTheme;
+}
+
+export interface OppositTheme {
   primary: string;
   surface: string;
   textColor: string;

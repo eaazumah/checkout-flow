@@ -17,11 +17,19 @@ export const useSettings = () => {
     dispatch(updates(data));
   };
 
+  const toggleTheme = () => {
+    if (_theme === "light") {
+      return dispatch(updates({ theme: "dark" }));
+    }
+    dispatch(updates({ theme: "light" }));
+  };
+
   const theme = _theme === "light" ? lightTheme : darkTheme;
 
   return {
     theme,
     _theme,
+    toggleTheme,
     resetSettings,
     updateSettings,
   };
