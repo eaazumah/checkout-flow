@@ -1,19 +1,29 @@
 import "@testing-library/jest-dom/extend-expect";
-import { render, screen } from "@testing-library/react";
+import { render, RenderResult, screen } from "@testing-library/react";
 import { createMemoryHistory } from "history";
 import React from "react";
+import { Provider } from "react-redux";
 import { Router } from "react-router-dom";
+import Wrapper from "../../Wrapper/Wrapper";
+import { store } from "../../_shared";
 import Routes from "../Rotues";
 
-test("full app rendering/navigating", () => {
+const renderRoutes = (): RenderResult => {
   const history = createMemoryHistory();
-  render(
-    <Router history={history}>
-      <Routes />
-    </Router>
+  return render(
+    <Provider store={store}>
+      <Wrapper>
+        <Router history={history}>
+          <Routes />
+        </Router>
+      </Wrapper>
+    </Provider>
   );
-  // verify page content for expected route
-  // often you'd use a data-testid or role query, but this is also possible
+};
+
+test("full app rendering/navigating", () => {
+  const { asFragment } = renderRoutes();
+  expect(asFragment()).toMatchSnapshot();
   expect(screen.getByText(/you are landing/i)).toBeInTheDocument();
 });
 
