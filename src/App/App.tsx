@@ -1,13 +1,19 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 import styled from "styled-components";
-import "./App.css";
+import { persistor, store } from "../_shared";
 
 const App = () => {
   return (
-    <Container>
-      <Button>My Button</Button>
-    </Container>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Container>
+          <Button>My Button</Button>
+        </Container>
+      </PersistGate>
+    </Provider>
   );
 };
 

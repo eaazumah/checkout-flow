@@ -10,3 +10,11 @@ export interface Theme {
 declare module "styled-components" {
   export interface DefaultTheme extends Theme {}
 }
+
+export interface ISettings {
+  theme: "dark" | "light";
+}
+
+export interface IReduxSate {
+  settings: ISettings;
+}
