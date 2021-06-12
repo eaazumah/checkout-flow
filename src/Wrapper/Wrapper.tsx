@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { useSettings } from "../_shared";
 import ThemeToggler from "./Componets/ThemeToggler";

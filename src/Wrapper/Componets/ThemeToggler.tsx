@@ -1,4 +1,3 @@
-import React from "react";
 import { WiMoonAltWaningCrescent1 } from "react-icons/wi";
 import styled from "styled-components";
 import { useSettings } from "../../_shared";

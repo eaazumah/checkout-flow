@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import NoMatch from "../404/NoMatch";
 import Landing from "../Landing/Landing";
+import NoMatch from "../NoMatch/NoMatch";
 interface Props {}
 
 const Rotues = (props: Props) => {
