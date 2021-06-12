@@ -6,10 +6,10 @@ interface Props {
   children: ReactNode;
 }
 
-const Wraper = (props: Props) => {
+const Wrapper = (props: Props) => {
   const { theme } = useSettings();
 
   return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 };
 
-export default Wraper;
+export default Wrapper;

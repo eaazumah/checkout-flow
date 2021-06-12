@@ -1,10 +1,14 @@
 import React from "react";
-
-// import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./Rotues";
 interface Props {}
 
 const Router = (props: Props) => {
-  return <div></div>;
+  return (
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  );
 };
 
 export default Router;
