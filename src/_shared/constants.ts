@@ -9,8 +9,8 @@ export const colors = {
 
 export const lightTheme = {
   primary: "#1262f4",
-  surface: " #ffffff",
-  textColor: "#FFFFFF",
+  surface: "#FFFFFF",
+  textColor: "#000000",
   backgroundColor: "#f7faff",
   opposite: {
     primary: "#1262f4",
