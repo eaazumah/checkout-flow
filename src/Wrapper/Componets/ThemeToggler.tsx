@@ -1,4 +1,3 @@
-import React from "react";
 import { WiMoonAltWaningCrescent1 } from "react-icons/wi";
 import styled from "styled-components";
 import { useSettings } from "../../_shared";
@@ -20,8 +19,8 @@ const Moon = styled(WiMoonAltWaningCrescent1)`
 
 const ActionButton = styled.button`
   position: absolute;
-  right: 50px;
-  bottom: 50px;
+  right: calc(100% - 96%);
+  top: calc(100% - 93%);
   border: none;
   border-radius: 50%;
   color: white;
@@ -31,7 +30,6 @@ const ActionButton = styled.button`
   outline: none;
   position: absolute;
   width: 60px;
-  font-family: Fredoka One;
   font-size: 18px;
   :hover {
     background-color: ${(pros) => pros.theme.opposite.surface};

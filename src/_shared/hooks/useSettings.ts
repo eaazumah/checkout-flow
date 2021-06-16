@@ -9,6 +9,7 @@ export const useSettings = () => {
   const state = useSelector<IReduxSate, ISettings>((state) => state.settings);
 
   const { theme: _theme } = state;
+
   const resetSettings = () => {
     dispatch(reset());
   };

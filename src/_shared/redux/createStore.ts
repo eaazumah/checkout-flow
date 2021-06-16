@@ -11,11 +11,15 @@ import {
   REHYDRATE,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import paymentInfo from "./payment/slice";
+import plan from "./plan/slice";
 import settings from "./settings/slice";
 
 const createStore = () => {
   const reducers = combineReducers({
+    plan,
     settings,
+    paymentInfo,
   });
 
   const persistConfig: PersistConfig<any, any, any, any> = {

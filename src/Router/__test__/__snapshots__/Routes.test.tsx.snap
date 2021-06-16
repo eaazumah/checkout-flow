@@ -7,21 +7,19 @@ exports[`full app rendering/navigating 1`] = `
   >
     <div>
       <div
-        class="sc-eCApnc fueSCu"
+        class="sc-pNWdM iVJsAw"
       >
-        <button
-          class="btn btn-primary"
-          type="button"
+        <div
+          class="sc-fujyAs container"
         >
-          My Button
-        </button>
-        <div>
-          you are landing
+          <div
+            class="spinner-border text-primary"
+          />
         </div>
       </div>
     </div>
     <button
-      class="sc-gtsrHT iKmdQF"
+      class="sc-gtsrHT etjLqv"
     >
       <svg
         class="sc-bdnxRM kkHltp"

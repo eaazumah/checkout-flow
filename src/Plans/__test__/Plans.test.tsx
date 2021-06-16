@@ -2,19 +2,19 @@ import { render, RenderResult } from "@testing-library/react";
 import { Provider } from "react-redux";
 import Wrapper from "../../Wrapper/Wrapper";
 import { store } from "../../_shared";
-import Landing from "../Landing";
+import Plans from "../Plans";
 
-const renderLanding = (): RenderResult => {
+const renderPlans = (): RenderResult => {
   return render(
     <Provider store={store}>
       <Wrapper>
-        <Landing />
+        <Plans />
       </Wrapper>
     </Provider>
   );
 };
 
-test("renders landing", () => {
-  const { asFragment } = renderLanding();
+test("renders Plans", () => {
+  const { asFragment } = renderPlans();
   expect(asFragment()).toMatchSnapshot();
 });

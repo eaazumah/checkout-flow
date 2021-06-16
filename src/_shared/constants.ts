@@ -27,7 +27,7 @@ export const darkTheme = {
   backgroundColor: "#131313",
   opposite: {
     primary: "#1262f4",
-    surface: " #ffffff",
+    surface: "#ffffff",
     textColor: "#FFFFFF",
     backgroundColor: "#f7faff",
   },
