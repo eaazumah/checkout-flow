@@ -1,15 +1,10 @@
-import Button from "react-bootstrap/Button";
 import styled from "styled-components";
+import Duration from "../Plans/Plans";
 
 interface Props {}
 
 const Landing = (props: Props) => {
-  return (
-    <Container>
-      <Button>My Button</Button>
-      <div>you are landing</div>
-    </Container>
-  );
+  return <Duration />;
 };
 
 const Container = styled.div`

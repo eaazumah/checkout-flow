@@ -21,10 +21,10 @@ const Wrapper = (props: Props) => {
 };
 
 const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  display: grid !important;
+  place-items: center;
   background-color: ${(props) => props.theme.backgroundColor};
 `;
 

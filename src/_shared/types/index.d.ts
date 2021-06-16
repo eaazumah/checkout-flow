@@ -30,6 +30,35 @@ export interface ISettings {
   theme: "dark" | "light";
 }
 
+export type ISize = 5 | 10 | 50;
+
+export type IDuration = 3 | 6 | 12;
+
+export interface IPlan {
+  size: ISize;
+  duration: IDuration;
+  upfrontPayment: boolean;
+  pricePerGB?: number;
+}
+
+export interface IPaymentInfo {
+  email?: string;
+  cardNumber?: string;
+  expirationDate?: string;
+  cvv?: string;
+}
+
 export interface IReduxSate {
+  plan: IPlan;
   settings: ISettings;
+  paymentInfo: IPaymentInfo;
+}
+
+export interface IPlanServerResponse {
+  duration_months: IDuration;
+  price_usd_per_gb: number;
+}
+
+export interface IPlansServerResponse {
+  subscription_plans: IPlanServerResponse[];
 }

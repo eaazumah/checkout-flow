@@ -24,7 +24,7 @@ const renderRoutes = (): RenderResult => {
 test("full app rendering/navigating", () => {
   const { asFragment } = renderRoutes();
   expect(asFragment()).toMatchSnapshot();
-  expect(screen.getByText(/you are landing/i)).toBeInTheDocument();
+  // expect(screen.getByText(/you are landing/i)).toBeInTheDocument();
 });
 
 test("landing on a bad page", () => {
@@ -37,4 +37,16 @@ test("landing on a bad page", () => {
   );
 
   expect(screen.getByText(/404/i)).toBeInTheDocument();
+});
+
+test("landing on a success page", () => {
+  const history = createMemoryHistory();
+  history.push("/completed");
+  render(
+    <Router history={history}>
+      <Routes />
+    </Router>
+  );
+
+  expect(screen.getByText(/Completed successfully/)).toBeInTheDocument();
 });
