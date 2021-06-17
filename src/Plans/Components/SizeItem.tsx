@@ -1,4 +1,4 @@
-import hexRgb from "hex-rgb";
+import hexToRgba from "hex-to-rgba";
 import ListGroup from "react-bootstrap/ListGroup";
 import { BsCheckCircle } from "react-icons/bs";
 import styled from "styled-components";
@@ -38,7 +38,7 @@ const Container = styled(ListGroup.Item)`
   background-color: ${(pros) => pros.theme.surface};
   border: 1px solid
     ${(pros) => {
-      return hexRgb(pros.theme.textColor, { format: "css", alpha: 0.4 });
+      return hexToRgba(pros.theme.textColor, "0.4");
     }};
 `;
 

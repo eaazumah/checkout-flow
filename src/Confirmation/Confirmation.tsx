@@ -1,4 +1,4 @@
-import hexRgb from "hex-rgb";
+import hexToRgba from "hex-to-rgba";
 import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -113,7 +113,7 @@ const Confirmation = (props: Props) => {
 
 const Label = styled.div`
   color: ${(pros) => {
-    return hexRgb(pros.theme.textColor, { format: "css", alpha: 0.7 });
+    return hexToRgba(pros.theme.textColor, "0.7");
   }} !important;
 `;
 
