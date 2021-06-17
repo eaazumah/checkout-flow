@@ -3,26 +3,20 @@
 exports[`renders app 1`] = `
 <DocumentFragment>
   <div
-    class="sc-kEqXSa IXmKJ"
+    class="sc-ksluID ipswmW"
   >
-    <div>
+    <div
+      class="sc-jrsJWt dgaPYA container"
+    >
       <div
-        class="sc-gKAaRy pQQtD"
-      >
-        <div
-          class="sc-jSFjdj container"
-        >
-          <div
-            class="spinner-border text-primary"
-          />
-        </div>
-      </div>
+        class="spinner-border text-primary"
+      />
     </div>
     <button
-      class="sc-jrsJWt ifMLaz"
+      class="sc-bqGGPW lfUNqR"
     >
       <svg
-        class="sc-pNWdM bymvXW"
+        class="sc-dIsUp cFZJjR"
         fill="currentColor"
         height="30"
         id="Layer_1"

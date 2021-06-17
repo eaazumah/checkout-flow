@@ -47,8 +47,8 @@ test("Updates and reset payment info", () => {
 
   // initial settings state
   let paymentInfo = store.getState().paymentInfo;
-  expect(paymentInfo?.email).toBe(undefined);
-  expect(paymentInfo?.cvv).toBe(undefined);
+  expect(paymentInfo?.email).toBe("");
+  expect(paymentInfo?.cvv).toBe("");
 
   // update settings
   store.dispatch(updates({ email: "email@gmail.com", cvv: "234" }));
@@ -59,6 +59,6 @@ test("Updates and reset payment info", () => {
   // reset paymentInfo
   store.dispatch(reset());
   paymentInfo = store.getState().paymentInfo;
-  expect(paymentInfo?.email).toBe(undefined);
-  expect(paymentInfo?.cvv).toBe(undefined);
+  expect(paymentInfo?.email).toBe("");
+  expect(paymentInfo?.cvv).toBe("");
 });

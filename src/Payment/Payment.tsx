@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import hexRgb from "hex-rgb";
+import hexToRgba from "hex-to-rgba";
 import { useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
@@ -148,7 +148,7 @@ const StledContainer = styled(Container)`
     background-color: ${(props) => props.theme.surface};
     border: 1px solid
       ${(pros) => {
-        return hexRgb(pros.theme.textColor, { format: "css", alpha: 0.4 });
+        return hexToRgba(pros.theme.textColor, "0.4");
       }};
   }
   .card-header {

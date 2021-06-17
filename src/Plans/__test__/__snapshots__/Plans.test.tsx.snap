@@ -3,17 +3,17 @@
 exports[`renders Plans 1`] = `
 <DocumentFragment>
   <div
-    class="sc-dlnjwi jfgOTq"
+    class="sc-dlnjwi kiQVmE"
   >
     <div
-      class="sc-fujyAs container"
+      class="sc-fujyAs iMmvzE container"
     >
       <div
         class="spinner-border text-primary"
       />
     </div>
     <button
-      class="sc-gtsrHT etjLqv"
+      class="sc-gtsrHT fNdUhv"
     >
       <svg
         class="sc-bdnxRM kkHltp"

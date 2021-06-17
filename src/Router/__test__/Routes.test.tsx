@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom/extend-expect";
 import { render, RenderResult, screen } from "@testing-library/react";
-import { createMemoryHistory } from "history";
+import { createMemoryHistory, MemoryHistory } from "history";
 import React from "react";
 import { Provider } from "react-redux";
 import { Router } from "react-router-dom";
@@ -8,8 +8,7 @@ import Wrapper from "../../Wrapper/Wrapper";
 import { store } from "../../_shared";
 import Routes from "../Rotues";
 
-const renderRoutes = (): RenderResult => {
-  const history = createMemoryHistory();
+const renderRoutes = (history: MemoryHistory<unknown>): RenderResult => {
   return render(
     <Provider store={store}>
       <Wrapper>
@@ -22,31 +21,24 @@ const renderRoutes = (): RenderResult => {
 };
 
 test("full app rendering/navigating", () => {
-  const { asFragment } = renderRoutes();
+  const history = createMemoryHistory();
+  const { asFragment } = renderRoutes(history);
   expect(asFragment()).toMatchSnapshot();
-  // expect(screen.getByText(/you are landing/i)).toBeInTheDocument();
 });
 
 test("landing on a bad page", () => {
   const history = createMemoryHistory();
   history.push("/some/bad/route");
-  render(
-    <Router history={history}>
-      <Routes />
-    </Router>
-  );
-
+  const { asFragment } = renderRoutes(history);
+  expect(asFragment()).toMatchSnapshot();
   expect(screen.getByText(/404/i)).toBeInTheDocument();
 });
 
 test("landing on a success page", () => {
   const history = createMemoryHistory();
   history.push("/completed");
-  render(
-    <Router history={history}>
-      <Routes />
-    </Router>
-  );
+  const { asFragment } = renderRoutes(history);
+  expect(asFragment()).toMatchSnapshot();
 
   expect(screen.getByText(/Completed successfully/)).toBeInTheDocument();
 });
