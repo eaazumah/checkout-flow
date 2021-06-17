@@ -40,9 +40,9 @@ const Payment = (props: Props) => {
 
   useEffect(() => {
     if (!pricePerGB) {
-      onPrevious();
+      history.goBack();
     }
-  }, [onPrevious, pricePerGB]);
+  }, [history, pricePerGB]);
 
   return (
     <StledContainer>
