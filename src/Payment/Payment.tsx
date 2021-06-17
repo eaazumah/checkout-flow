@@ -42,7 +42,7 @@ const Payment = (props: Props) => {
     if (!pricePerGB) {
       onPrevious();
     }
-  }, [onPrevious]);
+  }, [onPrevious, pricePerGB]);
 
   return (
     <StledContainer>

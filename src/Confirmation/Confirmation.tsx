@@ -48,7 +48,7 @@ const Confirmation = (props: Props) => {
     if (!paymentInfo.email) {
       history.push("/landing");
     }
-  }, [paymentInfo.email]);
+  }, [paymentInfo.email, history]);
 
   useEffect(() => {
     if (error) {
@@ -57,7 +57,7 @@ const Confirmation = (props: Props) => {
     if (data) {
       history.push("/completed");
     }
-  }, [error, data]);
+  }, [error, data, history]);
 
   return (
     <StledContainer>
