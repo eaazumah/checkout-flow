@@ -3,7 +3,7 @@
 exports[`renders app 1`] = `
 <DocumentFragment>
   <div
-    class="sc-ksluID ipswmW"
+    class="sc-bqGGPW fcQeVS"
   >
     <div
       class="sc-jrsJWt dgaPYA container"
@@ -13,10 +13,10 @@ exports[`renders app 1`] = `
       />
     </div>
     <button
-      class="sc-bqGGPW lfUNqR"
+      class="sc-dIsUp kAWnyK"
     >
       <svg
-        class="sc-dIsUp cFZJjR"
+        class="sc-crzoAE eqpIZy"
         fill="currentColor"
         height="30"
         id="Layer_1"
