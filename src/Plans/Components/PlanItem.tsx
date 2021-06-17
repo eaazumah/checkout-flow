@@ -54,7 +54,7 @@ const PlanItem = (props: Props) => {
     updatePlan({
       pricePerGB: plan.price_usd_per_gb,
     });
-  }, []);
+  }, [isSelected, preview, plan.price_usd_per_gb]);
 
   return (
     <StyledCard selected={preview ? false : isSelected}>
