@@ -48,7 +48,7 @@ const Confirmation = (props: Props) => {
     if (!paymentInfo.email) {
       history.push("/landing");
     }
-  }, []);
+  }, [paymentInfo.email]);
 
   useEffect(() => {
     if (error) {
