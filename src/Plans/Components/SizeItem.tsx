@@ -14,7 +14,7 @@ const SizeItem = (props: Props) => {
   const { size, updatePlan } = useSelectedPlan();
 
   const isSelected = props.isParentSelected
-    ? size == props.size
+    ? size === props.size
     : 5 === props.size;
 
   const setSize = () => {

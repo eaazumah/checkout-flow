@@ -1,11 +1,9 @@
 import Container from "react-bootstrap/Container";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import styled from "styled-components";
-import { useSettings } from "../_shared";
 interface Props {}
 
 const Success = (props: Props) => {
-  const { theme } = useSettings();
   return (
     <StledContainer>
       <AiOutlineCheckCircle color={"green"} size={60} />
